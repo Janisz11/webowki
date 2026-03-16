@@ -1,0 +1,51 @@
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+.btn-action {
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  width: 460px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
+}
+.card__header {
+  color: #00d2ff;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.card__text {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.btn-action {
+  background: #00d2ff;
+  color: white;
+  margin-top: 20px;
+}
+.btn-action:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}

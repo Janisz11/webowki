@@ -1,0 +1,12 @@
+@use 'variables' as v;
+
+body {
+    background: linear-gradient(135deg, v.$bg-primary 0%, v.$bg-secondary 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: v.$font-family;
+    color: v.$text-main;
+}

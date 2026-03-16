@@ -1,0 +1,50 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// Dziedziczenie 
+%btn-template {
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card {
+    @include m.glass-effect(15px);
+    
+    // Operatory
+    width: v.$card-base-width - (v.$padding-unit * 2);
+    padding: v.$padding-unit * 2;
+    
+    text-align: center;
+    
+    // Użycie funkcji do cienia
+    box-shadow: 0 10px m.shadow-power(2, 4) rgba(0,0,0,0.3);
+
+    // Zagnieżdżanie 
+    &__header {
+        color: v.$accent;
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__text {
+        opacity: 0.8;
+        line-height: 1.6;
+    }
+}
+
+.btn-action {
+    @extend %btn-template;
+    background: v.$accent;
+    color: white;
+    margin-top: v.$padding-unit;
+
+    &:hover {
+        filter: brightness(1.1);
+        transform: scale(1.05);
+    }
+}

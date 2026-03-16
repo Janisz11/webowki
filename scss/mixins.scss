@@ -1,0 +1,18 @@
+
+@mixin glass-effect($blur: 10px) {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+// Funkcja z pętlą @for (str. 11 instrukcji)
+// Cel: Dynamiczne obliczanie rozmycia cienia
+@function shadow-power($base, $exp) {
+    $result: 1;
+    @for $i from 1 through $exp {
+        $result: $result * $base;
+    }
+    @return $result * 1px;
+}
