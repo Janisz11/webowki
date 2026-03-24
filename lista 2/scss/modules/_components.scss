@@ -1,7 +1,7 @@
-@use 'variables' as v;
-@use 'mixins' as m;
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
 
-// Dziedziczenie 
+// Dziedziczenie
 %btn-template {
     padding: 12px 30px;
     border-radius: 50px;
@@ -14,17 +14,17 @@
 
 .card {
     @include m.glass-effect(15px);
-    
+
     // Operatory
     width: v.$card-base-width - (v.$padding-unit * 2);
     padding: v.$padding-unit * 2;
-    
+
     text-align: center;
-    
+
     // Użycie funkcji do cienia
     box-shadow: 0 10px m.shadow-power(2, 4) rgba(0,0,0,0.3);
 
-    // Zagnieżdżanie 
+    // Zagnieżdżanie
     &__header {
         color: v.$accent;
         font-size: 2.2rem;

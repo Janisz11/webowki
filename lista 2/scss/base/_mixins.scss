@@ -7,8 +7,9 @@
     border-radius: 20px;
 }
 
-// Funkcja z pętlą @for (str. 11 instrukcji)
-// Cel: Dynamiczne obliczanie rozmycia cienia
+// Funkcja z pętlą @for
+//dynamiczne rozmycie cienia
+
 @function shadow-power($base, $exp) {
     $result: 1;
     @for $i from 1 through $exp {
