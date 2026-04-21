@@ -28,7 +28,7 @@ public class AuthController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @PostMapping("/login")
+    @PostMapping("/token")
     public ResponseEntity<?> login(@RequestBody AuthRequest request) {
         try {
             UserDetails userDetails = userService.loadUserByUsername(request.getUsername());
