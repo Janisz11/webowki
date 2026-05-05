@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>WS Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Ekran logowania -->
+    <div id="login-screen" class="screen">
+        <div class="login-box">
+            <h1>WebSocket Chat</h1>
+            <input id="nick-input" placeholder="Twój nick" maxlength="30">
+
+            <select id="room-select">
+                <option value="">— Utwórz nowy pokój —</option>
+            </select>
+            <input id="room-input" placeholder="Lub wpisz nazwę nowego pokoju" maxlength="30">
+
+            <button id="join-btn">Dołącz</button>
+            <p id="login-error"></p>
+        </div>
+    </div>
+
+    <!-- Ekran czatu -->
+    <div id="chat-screen" class="screen hidden">
+        <header>
+            <span id="room-label"></span>
+            <span id="users-label"></span>
+            <button id="leave-btn">Wyjdź</button>
+        </header>
+
+        <main id="messages"></main>
+
+        <div id="typing-indicator"></div>
+
+        <footer>
+            <label for="image-input" class="img-btn" title="Wyślij zdjęcie">📎</label>
+            <input id="image-input" type="file" accept="image/*" hidden>
+            <input id="msg-input" type="text" placeholder="Napisz wiadomość...">
+            <button id="send-btn">Wyślij</button>
+        </footer>
+    </div>
+
+    <!-- Toast na błędy -->
+    <div id="toast"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

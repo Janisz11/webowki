@@ -1,0 +1,15 @@
+<html>
+<script>
+    let ws = new WebSocket('ws://localhost:8000');
+    ws.onopen = () => ws.send("Hello WebSocket server");
+    ws.onmessage = (message) => {
+        const li = document.createElement('li');
+        li.textContent = message.data;
+        document.getElementById('messages').appendChild(li);
+    };
+</script>
+<body>
+    <h1>This is a client page</h1>
+    <ul id="messages"></ul>
+</body>
+</html>
